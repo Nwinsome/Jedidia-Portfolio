@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <title>Jedidia Agyeiwaa — JA monogram</title>
+  <rect width="32" height="32" rx="6" fill="#101f2c"/>
+  <!-- Original geometric letterforms; no font or external assets required. -->
+  <g fill="none" stroke="#e3bc78" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M6 7h8v14c0 7-9 7-9 0"/>
+    <path d="M18 26l5-19 5 19m-8.4-6h6.8"/>
+  </g>
+</svg>
