@@ -74,6 +74,25 @@ if (year) year.textContent = String(new Date().getFullYear());
 
 /* Reveal progressively; respect reduced motion and live preference changes. */
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+// Picture selects a real static frame for reduced motion, even without JS.
+const oilAnimation = document.querySelector('#oil-flow-animation');
+const oilToggle = document.querySelector('.oil-flow-toggle');
+if (oilAnimation && oilToggle) {
+  let oilPaused = false;
+  const syncOilAnimation = () => {
+    oilAnimation.srcset = oilPaused || motionPreference.matches
+      ? 'images/oil-flow-poster.png' : 'images/oil-flow.gif';
+    oilAnimation.type = oilPaused || motionPreference.matches ? 'image/png' : 'image/gif';
+    oilToggle.hidden = motionPreference.matches;
+    oilToggle.textContent = oilPaused ? 'Play animation' : 'Pause animation';
+  };
+  oilToggle.addEventListener('click', () => {
+    oilPaused = !oilPaused;
+    syncOilAnimation();
+  });
+  if (motionPreference.addEventListener) motionPreference.addEventListener('change', syncOilAnimation);
+  syncOilAnimation();
+}
 if ('IntersectionObserver' in window && !motionPreference.matches) {
   const elements = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {

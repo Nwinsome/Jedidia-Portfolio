@@ -29,3 +29,11 @@ Download URL pattern:
 
 Photo IDs, in table order: 20259607, 30144082, 29190138.
 Geological contour and engineering line graphics in the page are original SVG/CSS artwork.
+
+## Supplied oil-flow animation
+
+`oil-flow.gif` was supplied for this portfolio; it is separate from the Pexels
+photographs above. Its existing GIF metadata specifies infinite looping (nine
+frames, 110 ms per frame). `oil-flow-poster.png` is a static extraction of frame
+4, used for reduced-motion preferences and the pause control. The animation
+illustrates the subject and does not depict Jedidia's own work.

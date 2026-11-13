@@ -50,6 +50,19 @@ main[id],main section[id],main h2[id]{scroll-margin-top:var(--anchor-gap)}
 .interest-card .card-label{margin-top:auto;padding-top:5px}
 .interest-card:hover .interest-image img{transform:scale(1.045);filter:saturate(1)}
 .image-note{margin:22px 0 0;font-size:11px;color:var(--muted)}
+/* Keep the full portrait animation visible, with its caption outside the media. */
+.oil-flow-card{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);margin:30px 0 0;border:1px solid #e3bc7840;border-radius:14px;background:linear-gradient(120deg,var(--navy-light),var(--navy));box-shadow:0 18px 45px #08151d25}
+.oil-flow-media{min-width:0;overflow:hidden;border-radius:13px 0 0 13px;background:var(--navy)}
+.oil-flow-media picture{display:block;max-width:370px;margin-inline:auto}
+.oil-flow-media img{display:block;width:100%;height:auto;aspect-ratio:370/436;object-fit:cover}
+.oil-flow-caption{align-self:center;padding:36px}
+.oil-flow-caption .eyebrow{margin-bottom:18px}
+.oil-flow-caption h3{font:400 clamp(28px,3vw,38px)/1.2 var(--serif);letter-spacing:-.6px;margin-bottom:18px}
+.oil-flow-caption>p:not(.eyebrow){max-width:420px;font-size:14px;color:var(--muted);margin-bottom:24px}
+.oil-flow-toggle{display:block;width:fit-content;margin-top:24px;padding:9px 15px;border:1px solid #e3bc7866;border-radius:5px;background:transparent;color:var(--gold);font-size:12px;cursor:pointer;transition:background .2s,border-color .2s}
+.oil-flow-toggle[hidden]{display:none}
+.oil-flow-toggle:hover{background:#e3bc7812;border-color:var(--gold)}
+@media(max-width:600px){.oil-flow-card{grid-template-columns:minmax(0,1fr)}.oil-flow-media{border-radius:13px 13px 0 0}.oil-flow-caption{padding:28px}.oil-flow-media picture{width:100%}}
 .image-note summary{width:fit-content;cursor:pointer;text-underline-offset:4px}
 .image-note p{max-width:700px;margin:12px 0 0}
 .image-note a{text-decoration:underline;text-underline-offset:4px}
